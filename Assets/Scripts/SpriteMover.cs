@@ -28,6 +28,30 @@ public class SpriteMover : MonoBehaviour
                 tf.position = tf.position + Vector3.up * Time.deltaTime * speed;
             }
 
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                tf.position = tf.position + Vector3.down * Time.deltaTime * speed;
+            }
+
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                tf.position = tf.position + Vector3.left * Time.deltaTime * speed;
+            }
+
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                tf.position = tf.position + Vector3.right * Time.deltaTime * speed;
+            }
         }
+        // This works if player is holding down shiuft or ISN'T holding down shift
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            tf.position = new Vector3(0, 0, 0);
+        }
+    }
+
+    void Jump()
+    {
+        // code that makes player jump
     }
 }
