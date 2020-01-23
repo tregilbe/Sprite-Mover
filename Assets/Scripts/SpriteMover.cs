@@ -19,6 +19,25 @@ public class SpriteMover : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
             // Only works if shift is held down.
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                tf.position = tf.position + Vector3.up * 1;
+            }
+
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                tf.position = tf.position + Vector3.down * 1;
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                tf.position = tf.position + Vector3.left * 1;
+            }
+
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                tf.position = tf.position + Vector3.right * 1;
+            }
         }
         else
         {
